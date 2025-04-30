@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Name</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Gym Name</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#membership">Membership</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-toggle">☰</div>
+    </div>
+  </header>
+  <section id="home" class="hero">
+    <img src="images/hero.jpg" alt="Fitness trainer" class="hero-bg-img">
+    <div class="container">
+      <h1>Unleash Your Potential</h1>
+      <p>Join the community. Transform your life.</p>
+      <a href="#membership" class="btn">Get Started</a>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We blend high-performance training with a welcoming atmosphere.</p>
+    </div>
+  </section>
+  <section id="membership" class="plans">
+    <div class="container">
+      <h2>Membership Plans</h2>
+      <div class="plan-cards">
+        <div class="plan-card">
+          <h3>Basic</h3>
+          <p>$19.99 / month</p>
+          <ul>
+            <li>Gym Access</li>
+            <li>Locker Room</li>
+          </ul>
+          <a href="plans.html?plan=Basic" class="btn-outline">Join Now</a>
+        </div>
+        <div class="plan-card featured">
+          <h3>Pro</h3>
+          <p>$29.99 / month</p>
+          <ul>
+            <li>Access + Classes</li>
+            <li>Free Towels</li>
+          </ul>
+          <a href="plans.html?plan=Pro" class="btn">Join Now</a>
+        </div>
+        <div class="plan-card">
+          <h3>Elite</h3>
+          <p>$49.99 / month</p>
+          <ul>
+            <li>All Pro Benefits</li>
+            <li>Personal Training</li>
+          </ul>
+          <a href="plans.html?plan=Elite" class="btn-outline">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="trainers" class="trainers">
+    <div class="container">
+      <h2>Meet Our Trainers</h2>
+      <div class="trainer-cards">
+        <div class="trainer-card">
+          <div class="trainer-img" style="background-image:url('https://source.unsplash.com/300x300/?strength,training');"></div>
+          <h3>Jane Doe</h3>
+          <p>Strength Coach</p>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-img" style="background-image:url('https://source.unsplash.com/300x300/?fitness,trainer');"></div>
+          <h3>John Smith</h3>
+          <p>Fitness Trainer</p>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-img" style="background-image:url('https://source.unsplash.com/300x300/?yoga,instructor');"></div>
+          <h3>Emily Clark</h3>
+          <p>Yoga Instructor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form action="https://formsubmit.co/Danperry1988@gmail.com" method="POST">
+        <!-- disable Spam protection -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- send user to thank you page after submit -->
+        <input type="hidden" name="_next" value="thankyou.html">
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea name="Message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Gym Name. All rights reserved.</p>
+      <div class="social">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

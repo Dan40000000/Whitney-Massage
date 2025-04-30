@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare Membership Plans</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .compare-table.red-black {
+      border-collapse: collapse;
+      width: 100%;
+      border: 3px solid #ff3b3f;
+    }
+    .compare-table.red-black th, .compare-table.red-black td {
+      border: 2px solid #ff3b3f;
+      padding: 10px;
+      text-align: center;
+      background-color: #ccc;
+      color: #333;
+    }
+    .compare-table.red-black th {
+      background-color: #ff3b3f;
+      color: #ffffff;
+    }
+    .compare-table.red-black td {
+      background-color: #ccc;
+      color: #333;
+    }
+    .compare-table.red-black th.selected, .compare-table.red-black td.selected {
+      background-color: #fff;
+      color: #333;
+      border: 2px solid #ff3b3f;
+    }
+    .compare-table.red-black button {
+      background-color: #ff3b3f;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .compare-table.red-black button:hover {
+      background-color: #cc3239;
+    }
+    .compare-table.red-black button.btn-change {
+      background-color: #ff3b3f;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .compare-table.red-black button.btn-change:hover {
+      background-color: #cc3239;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Gym Name</div>
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#membership">Membership</a>
+        <a href="index.html#trainers">Trainers</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-toggle">☰</div>
+    </div>
+  </header>
+  <main class="container compare-section">
+    <h2>Compare Membership Plans</h2>
+    <table class="compare-table red-black">
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th class="plan-basic">Basic ($19.99/month)</th>
+          <th class="plan-pro">Pro ($29.99/month)</th>
+          <th class="plan-elite">Elite ($49.99/month)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Gym Access</td><td class="plan-basic">✓</td><td class="plan-pro">✓</td><td class="plan-elite">✓</td></tr>
+        <tr><td>Locker Room</td><td class="plan-basic">✓</td><td class="plan-pro">✓</td><td class="plan-elite">✓</td></tr>
+        <tr><td>Group Classes</td><td class="plan-basic">×</td><td class="plan-pro">✓</td><td class="plan-elite">✓</td></tr>
+        <tr><td>Free Towels</td><td class="plan-basic">×</td><td class="plan-pro">✓</td><td class="plan-elite">✓</td></tr>
+        <tr><td>Personal Training</td><td class="plan-basic">×</td><td class="plan-pro">×</td><td class="plan-elite">✓</td></tr>
+        <tr><td>Sauna/Steam Room</td><td class="plan-basic">×</td><td class="plan-pro">×</td><td class="plan-elite">✓</td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td id="confirm-basic"></td>
+          <td id="confirm-pro"></td>
+          <td id="confirm-elite"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+  <script src="script.js"></script>
+  <script src="plans.js"></script>
+</body>
+</html>
