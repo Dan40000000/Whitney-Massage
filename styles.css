@@ -6,8 +6,7 @@
 }
 
 body {
-  /* unified light grey page background */
-  background: #ccc;
+    background: #f5f5f5;
   color: #333;
   line-height: 1.6;
 }
@@ -19,18 +18,23 @@ body {
 }
 
 .navbar {
-  /* grey navbar */
-  background: #ccc;
-  color: #333;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  transition: all 0.3s ease;
+  z-index: 1000;
+
 }
 
 .navbar .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  
 }
 
 .navbar .nav-links {
@@ -39,14 +43,32 @@ body {
 }
 
 .navbar .nav-links a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
+  margin-left: 2rem;
   font-weight: 500;
-  transition: color 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff4d4d;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after {
+  width: 100%;
 }
 
 .navbar .nav-links a:hover {
   color: #000;
+  transition: color 0.3s;
 }
 
 .nav-toggle {
@@ -57,8 +79,15 @@ body {
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
   overflow: hidden;
+  background: #000;
+  
 }
 
 .hero-bg-img {
@@ -68,7 +97,54 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.7;
+  animation: zoomEffect 20s infinite alternate;
   z-index: -1;
+}
+
+@keyframes zoomEffect {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content {
@@ -138,6 +214,30 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.plans {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.plans h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.plans h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #ff4d4d;
+}
+
 .plan-cards {
   display: flex;
   gap: 2rem;
@@ -146,16 +246,64 @@ body {
 }
 
 .plan-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
   padding: 2rem;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .plan-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.plan-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff4d4d;
+}
+
+.plan-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-card ul li {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.plan-card .btn {
+  width: 100%;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.plan-card .btn:hover {
+  background: #ff6b6b;
+  transform: scale(1.05);
+
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .plan-card.featured {
@@ -203,19 +351,44 @@ body {
   flex-wrap: wrap;
 }
 
-.trainer-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
+.trainers {
+  padding: 5rem 0;
+  background: #f8f9fa;
 }
 
-.trainer-card img {
-  width: 100%;
-  display: block;
+.trainers h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.trainers h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #ff4d4d;
+}
+
+.trainer-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.trainer-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .trainer-card:hover {
@@ -279,11 +452,39 @@ body {
   padding: 4rem 2rem;
   background: #f6f6f6;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 77, 77, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+  }
+}
+
 .compare-section h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #ff3b3f;
+  color: #ff4d4d;
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
+
+.compare-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #ff4d4d;
 }
 .compare-table {
   width: 100%;
@@ -310,11 +511,12 @@ body {
 }
 .compare-table th.selected,
 .compare-table td.selected {
-  background: #ff3b3f;
+  background: #ff4d4d;
   color: #fff;
   font-size: 1.6rem;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
 }
 
 /* Flex comparison cards styling */
@@ -384,13 +586,18 @@ body {
 }
 
 /* Responsive Navigation Toggle */
-@media (max-width: 768px) {
-  .nav-links {
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
     display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 2rem;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
+    align-items: center;
+    gap: 2rem;
     background: #000;
     padding: 1rem;
     border-radius: 5px;
