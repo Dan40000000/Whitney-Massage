@@ -6,33 +6,32 @@
   <title>Compare Membership Plans</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .compare-table.red-black {
+    .compare-table.garden {
       border-collapse: collapse;
-      width: 100%;
-      border: 3px solid #ff3b3f;
+      border: 3px solid var(--primary, #4caf50);
     }
-    .compare-table.red-black th, .compare-table.red-black td {
-      border: 2px solid #ff3b3f;
+    .compare-table.garden th, .compare-table.garden td {
+      border: 2px solid var(--primary, #4caf50);
       padding: 10px;
       text-align: center;
-      background-color: #ccc;
-      color: #333;
+      background-color: #e8f5e9;
+      color: #2e2e2e;
     }
-    .compare-table.red-black th {
-      background-color: #ff3b3f;
+    .compare-table.garden th {
+      background-color: var(--primary, #4caf50);
       color: #ffffff;
     }
-    .compare-table.red-black td {
-      background-color: #ccc;
-      color: #333;
+    .compare-table.garden td {
+      background-color: #e8f5e9;
+      color: #2e2e2e;
     }
-    .compare-table.red-black th.selected, .compare-table.red-black td.selected {
+    .compare-table.garden th.selected, .compare-table.garden td.selected {
       background-color: #fff;
       color: #333;
-      border: 2px solid #ff3b3f;
+      border: 2px solid var(--primary, #4caf50);
     }
-    .compare-table.red-black button {
-      background-color: #ff3b3f;
+    .compare-table.garden button {
+      background-color: var(--primary, #4caf50);
       color: #ffffff;
       border: none;
       padding: 10px 20px;
@@ -40,11 +39,11 @@
       cursor: pointer;
       border-radius: 4px;
     }
-    .compare-table.red-black button:hover {
-      background-color: #cc3239;
+    .compare-table.garden button:hover {
+      background-color: var(--primary-dark, #2e7d32);
     }
-    .compare-table.red-black button.btn-change {
-      background-color: #ff3b3f;
+    .compare-table.garden button.btn-change {
+      background-color: var(--primary, #4caf50);
       color: #ffffff;
       border: none;
       padding: 10px 20px;
@@ -52,8 +51,8 @@
       cursor: pointer;
       border-radius: 4px;
     }
-    .compare-table.red-black button.btn-change:hover {
-      background-color: #cc3239;
+    .compare-table.garden button.btn-change:hover {
+      background-color: var(--primary-dark, #2e7d32);
     }
   </style>
 </head>
@@ -73,7 +72,7 @@
   </header>
   <main class="container compare-section">
     <h2>Compare Membership Plans</h2>
-    <table class="compare-table red-black">
+    <table class="compare-table garden">
       <thead>
         <tr>
           <th>Features</th>
