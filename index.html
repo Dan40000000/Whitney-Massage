@@ -3,76 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zen Garden Massage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Whitney's Massage - Experience Tranquility</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>Zen Garden Massage</h1>
-      <p>Experience calm and renewal</p>
-      <button id="bookBtn" class="btn">Schedule Appointment</button>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="images/Whitney Logo.jpeg" alt="Whitney's Massage">
+      </a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <div class="overlay">
+        <h1>Experience Deep Relaxation</h1>
+        <p>Professional massage therapy tailored to your needs</p>
+        <button id="bookBtn" class="btn">Book Your Session</button>
+      </div>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Our sanctuary blends soft garden aesthetics, gentle aromas, and expert touch to soothe your body and mind.</p>
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>Welcome to Whitney's Massage</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>At Whitney's Massage, we believe in the healing power of touch. Our sanctuary offers a peaceful escape where expert massage therapy meets tranquil ambiance.</p>
+          <p>Every session is customized to address your specific needs, whether you're seeking relief from muscle tension, stress reduction, or simply a moment of peaceful relaxation.</p>
+          <div class="features">
+            <div class="feature">
+              <i class="fas fa-spa"></i>
+              <h3>Peaceful Environment</h3>
+              <p>Calming atmosphere for complete relaxation</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-hands"></i>
+              <h3>Expert Touch</h3>
+              <p>Years of professional experience</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-heart"></i>
+              <h3>Personalized Care</h3>
+              <p>Treatments tailored to your needs</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80" alt="Massage room">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Swedish Massage</h3>
-        <p>Light strokes to ease tension.</p>
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-feather"></i>
+          </div>
+          <h3>Swedish Massage</h3>
+          <p>Gentle strokes to promote relaxation and ease muscle tension</p>
+          <span class="duration">60/90 min</span>
+          <button class="btn-outline service-btn">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hand-rock"></i>
+          </div>
+          <h3>Deep Tissue</h3>
+          <p>Focused pressure to release chronic muscle tension</p>
+          <span class="duration">60/90 min</span>
+          <button class="btn-outline service-btn">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Aromatherapy</h3>
+          <p>Essential oils enhance your massage experience</p>
+          <span class="duration">60/90 min</span>
+          <button class="btn-outline service-btn">Learn More</button>
+        </div>
       </div>
-      <div class="card">
-        <h3>Deep Tissue</h3>
-        <p>Targeted release for tight muscles.</p>
-      </div>
-      <div class="card">
-        <h3>Aromatherapy</h3>
-        <p>Soothing essential oils.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Ready to experience deep relaxation? Contact us to schedule your appointment or ask any questions.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>(555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>hello@whitneysmassage.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Serenity Lane, Suite 100<br>Denver, CO 80202</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" action="thankyou.html" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
   <div id="modal" class="modal hidden">
     <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
+      <button id="closeModal" class="close" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
       <h2>Book Your Session</h2>
       <form id="bookingForm">
-        <label>Name<br><input type="text" name="name" required></label>
-        <label>Email<br><input type="email" name="email" required></label>
-        <label>Date<br><input type="date" name="date" required></label>
-        <label>Time<br><select name="time" required>
-          <option value="" disabled selected>Select a time</option>
-          <option>09:00 AM</option>
-          <option>11:00 AM</option>
-          <option>01:00 PM</option>
-          <option>03:00 PM</option>
-          <option>05:00 PM</option>
-        </select></label>
-        <button type="submit" class="btn">Confirm</button>
+        <div class="form-group">
+          <label for="booking-name">Name</label>
+          <input type="text" id="booking-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="booking-email">Email</label>
+          <input type="email" id="booking-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="booking-date">Date</label>
+          <input type="date" id="booking-date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="booking-time">Time</label>
+          <select id="booking-time" name="time" required>
+            <option value="" disabled selected>Select a time</option>
+            <option>09:00 AM</option>
+            <option>11:00 AM</option>
+            <option>01:00 PM</option>
+            <option>03:00 PM</option>
+            <option>05:00 PM</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Confirm Booking</button>
       </form>
     </div>
   </div>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form action="thankyou.html" method="POST">
-      <label>Name<br><input type="text" name="name" required></label>
-      <label>Email<br><input type="email" name="email" required></label>
-      <label>Message<br><textarea name="message" required></textarea></label>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
   <footer class="footer">
-    <p>&copy; 2025 Zen Garden Massage</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/Whitney Logo.jpeg" alt="Whitney's Massage">
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Whitney's Massage. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script defer src="script.js"></script>
 </body>
 </html>
