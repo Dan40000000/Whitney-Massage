@@ -3,130 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gym Name</title>
+  <title>Zen Garden Massage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">Gym Name</div>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#membership">Membership</a>
-        <a href="#trainers">Trainers</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-toggle">☰</div>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Zen Garden Massage</h1>
+      <p>Experience calm and renewal</p>
+      <button id="bookBtn" class="btn">Schedule Appointment</button>
     </div>
   </header>
-  <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Fitness trainer" class="hero-bg-img">
-    <div class="container">
-      <h1>Unleash Your Potential</h1>
-      <p>Join the community. Transform your life.</p>
-      <a href="#membership" class="btn">Get Started</a>
-    </div>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Our sanctuary blends soft garden aesthetics, gentle aromas, and expert touch to soothe your body and mind.</p>
   </section>
-  <section id="about" class="about">
-    <div class="container about-section">
-      <div class="about-content">
-        <h2>About Us</h2>
-        <p>We blend high-performance training with a welcoming atmosphere.</p>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Swedish Massage</h3>
+        <p>Light strokes to ease tension.</p>
       </div>
-      <div class="about-img">
-        <img src="images/about.jpg" alt="About our gym">
+      <div class="card">
+        <h3>Deep Tissue</h3>
+        <p>Targeted release for tight muscles.</p>
       </div>
-    </div>
-  </section>
-  <section id="membership" class="plans">
-    <div class="container">
-      <h2>Membership Plans</h2>
-      <div class="plan-cards">
-        <div class="plan-card">
-          <h3>Basic</h3>
-          <p>$19.99 / month</p>
-          <ul>
-            <li>Gym Access</li>
-            <li>Locker Room</li>
-          </ul>
-          <a href="plans.html?plan=Basic" class="btn-outline">Join Now</a>
-        </div>
-        <div class="plan-card featured">
-          <h3>Pro</h3>
-          <p>$29.99 / month</p>
-          <ul>
-            <li>Access + Classes</li>
-            <li>Free Towels</li>
-          </ul>
-          <a href="plans.html?plan=Pro" class="btn">Join Now</a>
-        </div>
-        <div class="plan-card">
-          <h3>Elite</h3>
-          <p>$49.99 / month</p>
-          <ul>
-            <li>All Pro Benefits</li>
-            <li>Personal Training</li>
-          </ul>
-          <a href="plans.html?plan=Elite" class="btn-outline">Join Now</a>
-        </div>
+      <div class="card">
+        <h3>Aromatherapy</h3>
+        <p>Soothing essential oils.</p>
       </div>
     </div>
   </section>
-  <section id="trainers" class="trainers">
-    <div class="container">
-      <h2>Meet Our Trainers</h2>
-      <div class="trainer-cards">
-        <div class="trainer-card">
-          <img src="images/janedoe.png" alt="Jane Doe" class="trainer-img">
-          <div class="trainer-info">
-            <h3>Jane Doe</h3>
-            <p>Strength Coach</p>
-          </div>
-        </div>
-        <div class="trainer-card">
-          <img src="images/coach-john.jpg" alt="John Smith" class="trainer-img">
-          <div class="trainer-info">
-            <h3>John Smith</h3>
-            <p>Fitness Trainer</p>
-          </div>
-        </div>
-        <div class="trainer-card">
-          <img src="images/instructor-emily.jpg" alt="Emily Clark" class="trainer-img">
-          <div class="trainer-info">
-            <h3>Emily Clark</h3>
-            <p>Yoga Instructor</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <form action="https://formsubmit.co/Danperry1988@gmail.com" method="POST">
-        <!-- disable Spam protection -->
-        <input type="hidden" name="_captcha" value="false">
-        <!-- send user to thank you page after submit -->
-        <input type="hidden" name="_next" value="thankyou.html">
-        <input type="text" name="Name" placeholder="Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <textarea name="Message" placeholder="Message" required></textarea>
-        <button type="submit" class="btn">Send</button>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Book Your Session</h2>
+      <form id="bookingForm">
+        <label>Name<br><input type="text" name="name" required></label>
+        <label>Email<br><input type="email" name="email" required></label>
+        <label>Date<br><input type="date" name="date" required></label>
+        <label>Time<br><select name="time" required>
+          <option value="" disabled selected>Select a time</option>
+          <option>09:00 AM</option>
+          <option>11:00 AM</option>
+          <option>01:00 PM</option>
+          <option>03:00 PM</option>
+          <option>05:00 PM</option>
+        </select></label>
+        <button type="submit" class="btn">Confirm</button>
       </form>
     </div>
-  </section>
+  </div>
+
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Gym Name. All rights reserved.</p>
-      <div class="social">
-        <a href="#">FB</a>
-        <a href="#">IG</a>
-        <a href="#">TW</a>
-      </div>
-    </div>
+    <p>&copy; 2025 Zen Garden Massage</p>
   </footer>
 </body>
 </html>
