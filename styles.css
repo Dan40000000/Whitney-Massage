@@ -86,7 +86,7 @@ body {
   text-align: center;
   color: #fff;
   overflow: hidden;
-  background: #000;
+  background: none;
   
 }
 
@@ -180,23 +180,23 @@ body {
 }
 
 .btn {
-  background: #ff3b3f;
+  background: #8f83ff;
   color: #fff;
   border: none;
 }
 
 .btn:hover {
-  background: #e53237;
+  background: #6d63d5;
 }
 
 .btn-outline {
   background: transparent;
-  color: #ff3b3f;
-  border: 2px solid #ff3b3f;
+  color: #8f83ff;
+  border: 2px solid #8f83ff;
 }
 
 .btn-outline:hover {
-  background: #ff3b3f;
+  background: #8f83ff;
   color: #fff;
 }
 
@@ -235,7 +235,7 @@ body {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #ff4d4d;
+  background: #8f83ff;
 }
 
 .plan-cards {
@@ -263,7 +263,7 @@ body {
 .plan-card h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #ff4d4d;
+  color: #8f83ff;
 }
 
 .plan-card p {
@@ -285,7 +285,7 @@ body {
 
 .plan-card .btn {
   width: 100%;
-  background: #ff4d4d;
+  background: #8f83ff;
   color: #fff;
   border: none;
   padding: 1rem;
@@ -295,7 +295,7 @@ body {
 }
 
 .plan-card .btn:hover {
-  background: #ff6b6b;
+  background: #c7c1ff;
   transform: scale(1.05);
 
   background: #fff;
@@ -307,7 +307,7 @@ body {
 }
 
 .plan-card.featured {
-  border: 2px solid #ff3b3f;
+  border: 2px solid #8f83ff;
 }
 
 .plan-card h3 {
@@ -372,7 +372,7 @@ body {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #ff4d4d;
+  background: #8f83ff;
 }
 
 .trainer-cards {
@@ -494,7 +494,7 @@ body {
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #ff4d4d;
+  color: #8f83ff;
   position: relative;
   animation: fadeInUp 1s ease;
 }
@@ -507,7 +507,7 @@ body {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #ff4d4d;
+  background: #8f83ff;
 }
 .compare-table {
   width: 100%;
@@ -534,7 +534,7 @@ body {
 }
 .compare-table th.selected,
 .compare-table td.selected {
-  background: #ff4d4d;
+  background: #8f83ff;
   color: #fff;
   font-size: 1.6rem;
   font-weight: bold;
@@ -569,7 +569,7 @@ body {
 .compare-card .plan-price {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #ff3b3f;
+  color: #8f83ff;
 }
 .features-list {
   list-style: none;
@@ -596,7 +596,7 @@ body {
 .compare-card.selected {
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  border: 3px solid #ff3b3f;
+  border: 3px solid #8f83ff;
 }
 .compare-card.selected .plan-price {
   color: #fff;
@@ -616,7 +616,7 @@ body {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(109, 99, 213, 0.95);
     padding: 2rem;
     flex-direction: column;
     align-items: center;
@@ -633,12 +633,12 @@ body {
   }
 }
 
-/* ===================== Garden Theme Overrides ===================== */
+/* ===================== Lavender Massage Theme Overrides ===================== */
 :root {
-  --primary: #4caf50;        /* main garden green */
-  --primary-dark: #2e7d32;   /* darker hover green */
-  --primary-light: #81c784;  /* light accent green */
-  --primary-bg: #f0fff0;     /* very light green background */
+  --primary: #8f83ff;        /* lavender */
+  --primary-dark: #6d63d5;   /* darker lavender */
+  --primary-light: #c7c1ff;  /* light lavender */
+  --primary-bg: #f4f4f9;     /* soft greyish background */
 }
 
 /* Global background & text */
@@ -649,7 +649,7 @@ body {
 
 /* Navbar background & link effects */
 .navbar {
-  background: rgba(10, 60, 10, 0.85);
+  background: rgba(109, 99, 213, 0.9);
 }
 
 .nav-links a:after {
@@ -747,14 +747,24 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=60') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1580281657526-428d772f0eff?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;
   z-index: -2;
 }
 
 /* Translucent overlay for hero text */
 .overlay {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.35);
   padding: 2rem;
   border-radius: 8px;
+  backdrop-filter: blur(3px);
 }
-/* =================== End Garden Theme Overrides =================== */
+
+/* Section backgrounds */
+.plans {
+  background: #f9f8ff;
+  color: #2e2e2e;
+}
+
+.trainers {
+  background: #fafaff;
+}
