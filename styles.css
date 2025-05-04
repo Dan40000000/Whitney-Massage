@@ -21,7 +21,7 @@ body {
   --primary: #2e1810;
   --primary-light: #4a2a1d;
   --accent: #e8d3c7;
-  --background: #fce4e7;
+  --background: #e6e6fa;
   --content-bg: #e6e6fa;
   --text: #2e1810;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -495,6 +495,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.service-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .trainers h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -612,6 +619,7 @@ body {
 .contact-form .form-group {
   flex: 1;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .contact-form input,
