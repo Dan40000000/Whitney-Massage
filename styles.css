@@ -22,6 +22,7 @@ body {
   --primary-light: #4a2a1d;
   --accent: #e8d3c7;
   --background: #fce4e7;
+  --content-bg: #e6e6fa;
   --text: #2e1810;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -286,6 +287,33 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.service-detail {
+  padding: 140px 0 60px;
+  background: var(--background);
+}
+
+.service-image {
+  margin: -3rem -3rem 3rem;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  height: 400px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--content-bg);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
 .plans {
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   color: #fff;
@@ -423,7 +451,7 @@ body {
 }
 
 .service-card {
-  background: #fff;
+  background: var(--content-bg);
   padding: 2.5rem;
   border-radius: 15px;
   text-align: center;
@@ -524,6 +552,45 @@ body {
   gap: 4rem;
   text-align: center;
   flex-direction: column;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(46, 24, 16, 0.1);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .contact form {
