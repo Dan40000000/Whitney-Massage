@@ -288,6 +288,28 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.booking-section {
+  padding: 140px 0 60px;
+  background: var(--background);
+}
+
+.booking-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--content-bg);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.calendar-container {
+  width: 100%;
+  min-height: 700px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .service-detail {
   padding: 140px 0 60px;
   background: var(--background);
@@ -556,7 +578,7 @@ body {
 }
 
 .contact-form form {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -567,16 +589,16 @@ body {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   border: 2px solid var(--accent);
   border-radius: 8px;
   background: #fff;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .contact-form textarea {
-  height: 150px;
+  height: 300px;
   resize: vertical;
 }
 
