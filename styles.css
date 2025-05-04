@@ -17,14 +17,25 @@ body {
   margin: auto;
 }
 
+:root {
+  --primary: #2e1810;
+  --primary-light: #4a2a1d;
+  --accent: #e8d3c7;
+  --background: #f5e6e0;
+  --text: #2e1810;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
-  background: #2e1810; /* Dark brown from logo */
+  background: var(--primary);
   padding: 0.5rem 0;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: var(--transition);
   z-index: 1000;
   height: 60px;
+  box-shadow: var(--shadow);
 }
 
 .navbar.nav-hidden {
@@ -94,8 +105,28 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #2e1810;
-  background: #f5e6e0;
+  color: var(--text);
+  background: var(--background);
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-light);
+  line-height: 1.6;
 }
 
 .hero-logo {
@@ -185,32 +216,35 @@ body {
 .btn, .btn-outline {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 700;
+  border-radius: 25px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background 0.3s, color 0.3s;
+  transition: var(--transition);
+  text-decoration: none;
 }
 
 .btn {
-  background: #8f83ff;
-  color: #fff;
-  border: none;
+  background: var(--primary);
+  color: var(--accent);
+  border: 2px solid var(--primary);
 }
 
 .btn:hover {
-  background: #6d63d5;
+  background: var(--primary-light);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  color: #8f83ff;
-  border: 2px solid #8f83ff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn-outline:hover {
-  background: #8f83ff;
-  color: #fff;
+  background: var(--primary);
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .about {
@@ -310,7 +344,6 @@ body {
 .plan-card .btn:hover {
   background: #c7c1ff;
   transform: scale(1.05);
-
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -357,16 +390,17 @@ body {
   background: #0056b3;
 }
 
-.trainer-cards {
-  display: flex;
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 2rem 0;
 }
 
-.trainers {
-  padding: 5rem 0;
-  background: #f8f9fa;
+.service-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
 }
 
 .trainers h2 {
