@@ -578,7 +578,7 @@ body {
 }
 
 .contact-form form {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -598,7 +598,7 @@ body {
 }
 
 .contact-form textarea {
-  height: 300px;
+  height: 200px;
   resize: vertical;
 }
 
