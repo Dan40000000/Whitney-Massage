@@ -21,7 +21,7 @@ body {
   --primary: #2e1810;
   --primary-light: #4a2a1d;
   --accent: #e8d3c7;
-  --background: #f5e6e0;
+  --background: #fce4e7;
   --text: #2e1810;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -31,10 +31,10 @@ body {
   position: fixed;
   width: 100%;
   background: var(--primary);
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   transition: var(--transition);
   z-index: 1000;
-  height: 60px;
+  height: 70px;
   box-shadow: var(--shadow);
 }
 
@@ -125,7 +125,7 @@ body {
   text-align: center;
   color: var(--text);
   background: var(--background);
-  padding: 2rem;
+  padding: 140px 0 60px;
 }
 
 .hero-content {
@@ -142,9 +142,16 @@ body {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--primary-light);
   line-height: 1.6;
+}
+
+.certification {
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 500;
 }
 
 .hero-logo {
@@ -506,6 +513,17 @@ body {
 .trainer-card p {
   margin-bottom: 1rem;
   color: #777;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  text-align: center;
+  flex-direction: column;
 }
 
 .contact form {
