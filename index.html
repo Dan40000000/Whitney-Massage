@@ -11,16 +11,20 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <a href="/" class="logo-text">Whitney's Massage</a>
+      <div class="nav-brand">
+        <img src="images/Whitney Logo.jpeg" alt="Whitney's Massage" class="nav-logo">
+        <span class="brand-text">Whitney's Massage</span>
+        <img src="images/Whitney Logo.jpeg" alt="Whitney's Massage" class="nav-logo">
+      </div>
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <div class="nav-toggle">
         <i class="fas fa-bars"></i>
-      </button>
+      </div>
     </div>
   </nav>
 
@@ -32,7 +36,7 @@
         <button id="bookBtn" class="btn">Book Your Session</button>
       </div>
     </div>
-  </section>
+  </header>
 
   <section id="about" class="section about">
     <div class="container">
@@ -71,72 +75,60 @@
       <h2>Our Services</h2>
       <div class="service-cards">
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-feather"></i>
-          </div>
+          <img src="images/swedish-massage.jpg" alt="Swedish Massage">
           <h3>Swedish Massage</h3>
-          <p>Gentle strokes to promote relaxation and ease muscle tension</p>
           <span class="duration">60-240 min</span>
+          <p>A gentle, relaxing massage that uses long strokes to promote wellness.</p>
           <div class="service-actions">
             <a href="services/swedish-massage.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-hand-rock"></i>
-          </div>
-          <h3>Deep Tissue</h3>
-          <p>Focused pressure to release chronic muscle tension</p>
+          <img src="images/deep-tissue.jpg" alt="Deep Tissue Massage">
+          <h3>Deep Tissue Massage</h3>
           <span class="duration">60-240 min</span>
+          <p>Targets deep muscle layers to release chronic tension and pain.</p>
           <div class="service-actions">
             <a href="services/deep-tissue.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3>Aromatherapy</h3>
-          <p>Essential oils enhance your massage experience</p>
+          <img src="images/aromatherapy.jpg" alt="Aromatherapy Massage">
+          <h3>Aromatherapy Massage</h3>
           <span class="duration">60-240 min</span>
+          <p>Combines massage with essential oils for enhanced relaxation.</p>
           <div class="service-actions">
             <a href="services/aromatherapy.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-fire"></i>
-          </div>
+          <img src="images/cupping.jpg" alt="Cupping Therapy">
           <h3>Cupping Therapy</h3>
-          <p>Vacuum cups release tension and improve circulation</p>
           <span class="duration">60-240 min</span>
+          <p>Ancient therapy that uses suction to improve blood flow and healing.</p>
           <div class="service-actions">
             <a href="services/cupping.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-running"></i>
-          </div>
+          <img src="images/sports-massage.jpg" alt="Sports Massage">
           <h3>Sports Massage</h3>
-          <p>Performance-focused treatment for active lifestyles</p>
           <span class="duration">60-240 min</span>
+          <p>Focused massage for athletes and active individuals.</p>
           <div class="service-actions">
             <a href="services/sports-massage.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-child"></i>
-          </div>
+          <img src="images/stretching.jpg" alt="Deep Stretching Work">
           <h3>Deep Stretching Work</h3>
-          <p>Assisted stretching and mobility work for better flexibility</p>
           <span class="duration">60-240 min</span>
+          <p>Assisted stretching to improve flexibility and reduce muscle tension.</p>
           <div class="service-actions">
             <a href="services/stretching.html" class="btn-outline service-btn">Learn More</a>
             <a href="#booking" class="btn-schedule">Schedule Now</a>
@@ -146,12 +138,14 @@
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+  <footer id="contact" class="footer">
     <div class="container">
-      <div class="contact-grid">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/Whitney Logo.jpeg" alt="Whitney's Massage" class="footer-logo-img">
+        </div>
         <div class="contact-info">
-          <h2>Get in Touch</h2>
-          <p>Ready to experience deep relaxation? Contact us to schedule your appointment or ask any questions.</p>
+          <h2>Contact Us</h2>
           <div class="contact-details">
             <div class="contact-item">
               <i class="fas fa-phone"></i>
@@ -163,28 +157,13 @@
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>123 Serenity Lane, Suite 100<br>Denver, CO 80202</span>
+              <span>123 Wellness Street, Denver, CO 80201</span>
             </div>
           </div>
         </div>
-        <form class="contact-form" action="thankyou.html" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
       </div>
     </div>
-  </section>
+  </footer>
 
   <div id="modal" class="modal hidden">
     <div class="modal-content">
