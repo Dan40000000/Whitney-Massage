@@ -124,8 +124,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--text);
-  background: var(--background);
+  color: #6b4c93;
+  background: #f0f0f0;
   padding: 140px 0 60px;
 }
 
@@ -139,12 +139,13 @@ body {
   margin: 2rem 0;
   font-weight: 700;
   line-height: 1.2;
+  color: #6b4c93;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: var(--primary-light);
+  color: #6b4c93;
   line-height: 1.6;
 }
 
