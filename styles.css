@@ -318,8 +318,8 @@ body {
 .service-image {
   margin: -3rem -3rem 3rem;
   border-radius: 20px 20px 0 0;
-  overflow: hidden;
-  max-height: 600px;
+  overflow: visible;
+  max-height: none;
 }
 
 .service-image img {
